@@ -9,8 +9,10 @@
 int main(int ac __attribute__((unused)), char *av[])
 {
 	ssize_t n = 0, flag = 20, status = 0;
-	size_t size = 0; num = 0, x, y;
-	char *exec = NULL, *buf = NULL, *s_count = NULL;
+	size_t size = 0, num = 0, x, y;
+	char *exec = NULL;
+	char *buf = NULL;
+	char *s_count = NULL;
 	char **fp = NULL;
 	path_l *link_path = NULL;
 
@@ -34,7 +36,7 @@ int main(int ac __attribute__((unused)), char *av[])
 			status = func_exec(exec, fp, flag);
 		else if ((num > 0 && flag != 4 && flag != 0))
 		{
-			x = err(y, av[0], fp, &s_count, flag)
+			x = err(y, av[0], fp, &s_count, flag);
 			write(STDERR_FILENO, s_count, x);
 			free(s_count);
 		}

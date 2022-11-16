@@ -13,7 +13,7 @@ size_t printnum(size_t num, char *buf, size_t count)
 	size_t f;
 
 	f = num;
-	for (s = 0; num / 10 !+ 0; s++)
+	for (s = 0; num / 10 != 0; s++)
 		num = num / 10;
 	for (t = 0; t <= s - 1; t++)
 		u = u * 10;

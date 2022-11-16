@@ -12,7 +12,7 @@ ssize_t printenv(void)
 	while (environ[a])
 	{
 		write(STDOUT_FILENO, environ[a], _strlen(environ[a]));
-		write(STDOUT_FILENO, &n_line, );
+		write(STDOUT_FILENO, &n_line, 1);
 		a++;
 	}
 	return (0);

@@ -15,7 +15,7 @@ int func_exec(char *exec, char **inp, ssize_t flag)
 
 	fam = fork();
 	if (fam == 0)
-		execve(execve, inp, environ);
+		execve(exec, inp, environ);
 
 	wait(&status);
 	h = WEXITSTATUS(status);

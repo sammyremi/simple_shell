@@ -4,7 +4,7 @@
  * free_list_path - frees a list
  * @head: pointer to first node
  */
-void free_list_path(path_l *head);
+void free_list_path(path_l *head)
 {
 	path_l *ptr = NULL;
 

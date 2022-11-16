@@ -9,7 +9,7 @@
 char *str_cat(char *s1, char *s2)
 {
 	int a, b, c;
-	char *p NULL;
+	char *p = NULL;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -35,6 +35,6 @@ char *str_cat(char *s1, char *s2)
 	}
 	p[a + c] = '\0';
 
-	return (p);
+return (p);
 }
 

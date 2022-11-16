@@ -16,16 +16,16 @@ size_t wordcount(char *inp, char ch)
 		str = 9;
 
 	if (inp[0] == '\n')
-		rreturn (0);
+		return (0);
 	else if (inp[0] != ch && inp[0] != 9)
-		num++:
+		num++;
 
 	for (g = 1; inp[g] != '\0'; g++)
 	{
 		if (inp[g] == '\n' && inp[g + 1] == '\0')
 			break;
-		if ((inp[g - 1] == ch && inp[g] != ch || (inp[g - 1] == str && inp[g] != str))
+		if ((inp[g - 1] == ch && inp[g] != ch) || (inp[g - 1] == str && inp[g] != str))
 				num++;
 	}
-	return (num);
+return (num);
 }

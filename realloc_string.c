@@ -30,7 +30,7 @@ char *string_realloc(char **ptr, size_t a, size_t b, char *var, size_t len_var)
 			p[f] = ptr[a][f];
 		else if (f >= b && f < b + lenval)
 		{
-			p[f] = varr[f - b];
+			p[f] = var[f - b];
 		}
 		else
 		{

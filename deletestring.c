@@ -10,7 +10,7 @@
 char *string_del(char **ptr, size_t a, size_t *num)
 {
 	size_t f, g, str_len;
-	char *p NULL;
+	char *p = NULL;
 
 	for (f = a; ptr[f + 1] != NULL; f++)
 	{

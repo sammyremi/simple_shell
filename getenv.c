@@ -11,7 +11,7 @@ char *get_env(const char *buf)
 
 	len = _strlen(buf);
 
-	for (a = 0; environ[a] !+ NULL; a++)
+	for (a = 0; environ[a] != NULL; a++)
 	{
 		for (b = 0; b < len; b++)
 		{

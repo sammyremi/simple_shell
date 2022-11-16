@@ -9,7 +9,7 @@
  */
 ssize_t setenv_builtin(char **inp, ssize_t *status)
 {
-	char *p_val = NULL:
+	char *p_val = NULL;
 	char *p = NULL;
 	ssize_t varlen, envlen;
 

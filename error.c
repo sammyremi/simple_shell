@@ -26,7 +26,7 @@ size_t err(size_t h, char *av, char **inp, char **s_count, int flag)
 	else
 		mes_len = 12;
 
-	sum = arg_len + 2 + num_len + 2 + inp_ len + mes_len;
+	sum = arg_len + 2 + num_len + 2 + inp_len + mes_len;
 	*s_count = malloc(sizeof(char) * sum);
 
 	for (s = 0; s < arg_len; s++)

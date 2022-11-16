@@ -8,7 +8,7 @@
  * @status: status exit
  * Return: success status or 5 fail
  */
-ssize_t exit_builtin(char **inp, char *buf, path_l h_path *, ssize_t *status)
+ssize_t exit_builtin(char **inp, char *buf, path_l *h_path, ssize_t *status)
 {
 	size_t a = 0, FV;
 

@@ -14,13 +14,13 @@
 	char *p = NULL;
 	int len_var;
 
-	for (a = 0; a < num; a++)
+	for (a = 0; a < *num; a++)
 	{
 		if (ptr[a][0] == '#')
 		{
 			for (c = a; c < *num; c++)
 			{
-				free(ptr[c];
+				free(ptr[c]);
 				ptr[c] = NULL;
 			}
 			*num = a;

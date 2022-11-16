@@ -22,7 +22,7 @@ unsigned int a_toi(char *c)
 		}
 		a++;
 	}
-	while (c[a] > = '0' && c[a] <= '9')
+	while (c[a] >= '0' && c[a] <= '9')
 	{
 		ptr = ptr * 10 + (c[a] - '0');
 		a++;
