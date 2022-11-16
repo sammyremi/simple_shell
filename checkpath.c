@@ -3,17 +3,17 @@
 /**
  * _checkpath - check if path + input is executable
  * @exec: path + input
- * @head: head of list of path
+ * @h: head of list of path
  * @inp: input user (first word)
  * @num: number of words
  * @status: status of last command
  * Return: 0 - not found
- * 	   1 - path + input is executable -> free in func_exec
- * 	   2 - input is executable
- * 	   3 - path + input || input exists but not executable
- * 	   4 - do nothing
+ *	1 - path + input is executable -> free in func_exec
+ *	2 - input is executable
+ *	3 - path + input || input exists but not executable
+ *	4 - do nothing
  */
-int _checkpath(char **exec, path_l *head, char *inp, size_t num, ssize_t *status)
+int _checkpath(char **exec, path_l *h, char *inp, size_t num, ssize_t *status)
 {
 	size_t a;
 	struct stat sta;
@@ -30,9 +30,9 @@ int _checkpath(char **exec, path_l *head, char *inp, size_t num, ssize_t *status
 		*status = 127;
 		return (3);
 	}
-	for (a = 0; head != NULL && inp[0] != '/'; a++)
+	for (a = 0; h != NULL && inp[0] != '/'; a++)
 	{
-		*exec = str_cat(head->d_path, inp);
+		*exec = str_cat(h->d_path, inp);
 		if (stat(*exec, &sta) == 0 && sta.st_mode & S_IXUSR)
 			return (1);
 		else if (stat(*exec, &sta) == 0)
@@ -41,11 +41,12 @@ int _checkpath(char **exec, path_l *head, char *inp, size_t num, ssize_t *status
 			free(*exec);
 			return (3);
 		}
-		head = head->link;
+		h = h->link;
 		free(*exec);
 	}
 	*exec = inp;
-	if (stat(inp, &sta) == 0 && sta.st_mode & S_IXUSR && (inp[0] == '/' || inp[0] == '.'))
+	if (stat(inp, &sta) == 0 && sta.st_mode & S_IXUSR
+			&& (inp[0] == '/' || inp[0] == '.'))
 		return (2);
 	else if (stat(*exec, &sta) == 0 && (inp[0] == '/' || inp[0] == '.'))
 	{

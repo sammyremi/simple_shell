@@ -17,7 +17,7 @@ char *string_realloc(char **ptr, size_t a, size_t b, char *var, size_t len_var)
 	if (var == NULL)
 		lenval = 0;
 	else
-		lenval = _strlen (var);
+		lenval = _strlen(var);
 	wordlen = _strlen(ptr[a]);
 
 	len = lenval + wordlen - len_var - 1 + 1;

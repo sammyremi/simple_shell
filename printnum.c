@@ -4,7 +4,7 @@
  * printnum - saves in buf numbers to be printed
  * @num: number to be printed
  * @buf: buffer where numbers are going to be saved
- * @count position of the buffer
+ * @count: position of the buffer
  * Return: new position of the buf
  */
 size_t printnum(size_t num, char *buf, size_t count)

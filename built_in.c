@@ -4,17 +4,17 @@
  * check_builtin - checks the built-in
  * @inp: input user
  * @buf: buffer input
- * @link_path: PATH
+ * @l_path: PATH
  * @status: status exit
  * Return: flag
  */
-ssize_t check_builtin(char **inp, char *buf, path_l *link_path, ssize_t *status)
+ssize_t check_builtin(char **inp, char *buf, path_l *l_path, ssize_t *status)
 {
 	ssize_t flag = 10;
 
 	if (_strcmp(inp[0], "exit") == 0)
 	{
-		flag = exit_builtin(inp, buf, link_path, status);
+		flag = exit_builtin(inp, buf, l_path, status);
 	}
 	if (_strcmp(inp[0], "env") == 0)
 	{

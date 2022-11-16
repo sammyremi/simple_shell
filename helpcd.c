@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * prints how to use cd built-in
+ * helpcd - prints how to use cd built-in
  * Return: nothing
  */
 void helpcd(void)

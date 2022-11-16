@@ -24,7 +24,7 @@ ssize_t setenv_builtin(char **inp, ssize_t *status)
 
 	for (envlen = 0; environ[envlen] != NULL; envlen++)
 	{
-	
+
 	}
 	p = malloc(sizeof(char) * (varlen + 1 + 1));
 	free(p);

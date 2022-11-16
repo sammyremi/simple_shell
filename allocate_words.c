@@ -16,7 +16,7 @@ char **words_allocate(char *inp, size_t *num, size_t status)
 	ptr = malloc(sizeof(char *) * (*num + 1));
 	if (ptr == NULL)
 		return (NULL);
-	
+
 	p = &inp[0];
 	for (a = 0; a < *num; a++)
 	{

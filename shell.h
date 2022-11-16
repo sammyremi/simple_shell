@@ -20,7 +20,7 @@ extern char **environ;
 
 /**
  * struct path_list - singly linked list for the path
- * @nod: pointer to path value
+ * @d_path: pointer to path value
  * @link: pointer to the next node
  */
 typedef struct path_list
@@ -41,13 +41,13 @@ void free_list_path(path_l *head);
 path_l *_linkedpath(void);
 size_t wordcount(char *inp, char ch);
 char **words_allocate(char *inp, size_t *num, size_t status);
-ssize_t check_builtin(char **inp, char *buf, path_l *, ssize_t *);
-int _checkpath(char **exec, path_l *link_path, char *inp, size_t num, ssize_t *status);
+ssize_t check_builtin(char **inp, char *buf, path_l *l_path, ssize_t *status);
+int _checkpath(char **exec, path_l *h, char *inp, size_t num, ssize_t *status);
 int func_exec(char *exec, char **inp, ssize_t flag);
 size_t err(size_t h, char *av, char **inp, char **s_count, int flag);
 char **wordcheck(char **ptr, size_t *num, size_t status);
 char *string_del(char **ptr, size_t a, size_t *num);
-char *string_realloc(char **ptr, size_t a, size_t b, char *var, size_t len_var);
+char *string_realloc(char **ptr, size_t a, size_t, char *var, size_t len_var);
 char *str_cat(char *s1, char *s2);
 int select_strlen(char *str, char ch);
 char *realloc_specialnum(size_t num, char **ptr, size_t a, size_t b);

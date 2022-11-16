@@ -24,8 +24,9 @@ size_t wordcount(char *inp, char ch)
 	{
 		if (inp[g] == '\n' && inp[g + 1] == '\0')
 			break;
-		if ((inp[g - 1] == ch && inp[g] != ch) || (inp[g - 1] == str && inp[g] != str))
-				num++;
+		if ((inp[g - 1] == ch && inp[g] != ch)
+				|| (inp[g - 1] == str && inp[g] != str))
+			num++;
 	}
 return (num);
 }

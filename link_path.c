@@ -16,7 +16,7 @@ path_l *_linkedpath(void)
 	if (path == NULL)
 		path = "";
 	num_p = wordcount(path, select);
-	
+
 	for (a = 0; a < num_p || path[0] == ':'; a++)
 	{
 		if (path[0] == ':')

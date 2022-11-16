@@ -7,7 +7,7 @@
  * @status: status of last command
  * Return: array of change words if special character occurs
  */
- char **wordcheck(char **ptr, size_t *num, size_t status)
+char **wordcheck(char **ptr, size_t *num, size_t status)
 {
 	size_t a, b, c, end;
 	char *var = NULL;
@@ -35,11 +35,14 @@
 			}
 			else if (ptr[a][b] == '$' && ptr[a][b + 1] == '?')
 				ptr[a] = realloc_specialnum(status, ptr, a, b);
-			else if (ptr[a][b] == '$' && (is_alpha(ptr[a][b + 1]) == 1 || ptr[a][b + 1] == '_'))
+			else if (ptr[a][b] == '$' && (is_alpha(ptr[a][b + 1]) == 1
+						|| ptr[a][b + 1] == '_'))
 			{
-				for (len_var = 0; is_alpha(ptr[a][b + len_var + 1]) == 1 || ptr[a][b + len_var + 1] == '_' || is_digit(ptr[a][b + len_var + 1]); len_var++)
+				for (len_var = 0; is_alpha(ptr[a][b + len_var + 1]) == 1
+						|| ptr[a][b + len_var + 1] == '_'
+						|| is_digit(ptr[a][b + len_var + 1]); len_var++)
 				{
-				
+
 				}
 				p = malloc(sizeof(char) * (len_var + 1));
 				for (c = b + 1; c < len_var + b + 1; c++)

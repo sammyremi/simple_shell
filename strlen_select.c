@@ -13,9 +13,10 @@ int select_strlen(char *str, char ch)
 
 	if (ch == ' ')
 		selc = 9;
-	for (v = 0; str[v] != '\0' && str[v] != ch && str[v] != selc && str[v] != '\n'; v++)
+	for (v = 0; str[v] != '\0' && str[v] != ch && str[v] != selc
+			&& str[v] != '\n'; v++)
 	{
-	
+
 	}
 	return (v);
 }
